@@ -1,0 +1,953 @@
+/* 
+  Volunteer & Social Impact Template Styles
+  A warm, approachable design with emphasis on readability and storytelling
+*/
+
+:root {
+  --primary-color: #4d9078; /* warm green - representing growth and community */
+  --secondary-color: #f5a742; /* warm orange/gold - representing warmth and energy */
+  --accent-color: #e76f51; /* coral - for highlights and calls to action */
+  --dark-color: #2d3e50; /* deep blue-gray - for text and headers */
+  --light-color: #f8f9fa; /* off-white - for backgrounds */
+  --mid-color: #e9ecef; /* light gray - for alternating sections */
+  --text-color: #37474f; /* dark gray-blue - for body text */
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* subtle shadow */
+  
+  /* Typography */
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--light-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--dark-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+ul {
+  list-style-position: inside;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.hero {
+  background: linear-gradient(to right, rgba(77, 144, 120, 0.9), rgba(45, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  padding: 3rem 0;
+  color: white;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.profile-img {
+  flex: 0 0 200px;
+}
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: var(--shadow);
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.name {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  margin-right: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+}
+
+/* Navigation */
+.main-nav {
+  background-color: var(--dark-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255,255,255,0.1);
+  color: var(--secondary-color);
+}
+
+/* Section Styling */
+.section {
+  padding: 4rem 0;
+}
+
+.alt-section {
+  background-color: var(--mid-color);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  border-radius: 2px;
+}
+
+/* About Section */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.values-list {
+  list-style: none;
+}
+
+.values-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.values-list li::before {
+  content: '•';
+  color: var(--secondary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.value-title {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Timeline Style (for Volunteer Experience) */
+.volunteer-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.volunteer-timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: var(--primary-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 3px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -20px;
+  background-color: var(--secondary-color);
+  border: 4px solid var(--light-color);
+  border-radius: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+  left: -20px;
+}
+
+.timeline-content {
+  padding: 20px;
+  background-color: white;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.timeline-title {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+  font-size: 0.9rem;
+}
+
+.organization {
+  font-weight: 600;
+}
+
+.impact-metrics {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.impact-metrics h4 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.impact-metrics ul {
+  list-style-type: none;
+}
+
+.impact-metrics li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.impact-metrics li::before {
+  content: '✓';
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.project-title {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+.project-duration {
+  color: var(--dark-color);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.project-description {
+  padding: 0 1.5rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.project-outcomes, .project-tech {
+  padding: 1rem 1.5rem;
+}
+
+.project-outcomes h4, .project-tech h4 {
+  color: var(--accent-color);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background-color: var(--mid-color);
+  color: var(--dark-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* Community Cards */
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.community-card {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.community-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 8px 0 0 8px;
+}
+
+.community-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.community-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.involvement-role, .involvement-duration {
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.involvement-role {
+  font-weight: 600;
+}
+
+.involvement-duration {
+  font-size: 0.9rem;
+}
+
+.achievements {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.achievements h4 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.achievements ul {
+  list-style-type: none;
+}
+
+.achievements li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.achievements li::before {
+  content: '✓';
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+/* Skills Section */
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skills-category {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.skills-category h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.skills-list {
+  list-style-type: none;
+}
+
+.skills-list li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+}
+
+.skills-list li::before {
+  content: '•';
+  color: var(--secondary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Education Timeline */
+.education-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-item {
+  display: flex;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.education-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.education-content {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  flex: 1;
+}
+
+.education-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.education-school, .education-date {
+  margin-bottom: 0.5rem;
+}
+
+.education-school {
+  font-weight: 600;
+}
+
+.education-date {
+  font-size: 0.9rem;
+  color: var(--dark-color);
+}
+
+.education-thesis {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.relevant-courses {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.relevant-courses h4 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Awards Grid */
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.award-card {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.award-card:hover {
+  transform: translateY(-5px);
+}
+
+.award-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 1.5rem;
+}
+
+.award-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.award-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.award-date, .award-org {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.award-org {
+  font-weight: 600;
+}
+
+.award-description {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Call to Action Section */
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.cta-content h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(231, 111, 81, 0.3);
+}
+
+.cta-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(77, 144, 120, 0.4);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-info {
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  transform: translateY(-3px);
+  color: var(--secondary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+  
+  .volunteer-timeline::after {
+    left: 31px;
+  }
+  
+  .timeline-icon {
+    left: 11px;
+    right: auto;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-icon {
+    left: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-img {
+    margin: 0 auto;
+  }
+  
+  .contact-links, .social-links {
+    justify-content: center;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .community-card {
+    flex-direction: column;
+  }
+  
+  .community-icon {
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .award-card {
+    flex-direction: column;
+  }
+  
+  .award-icon {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Add styles for Research Interests section */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.research-card {
+  background-color: var(--card-bg-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.research-card h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.research-card p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Add styles for Publications section */
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.publication-item {
+  background-color: var(--card-bg-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.publication-title {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.publication-journal {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.publication-year {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.publication-authors {
+  font-style: italic;
+  margin-bottom: 0.8rem;
+}
+
+.publication-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.publication-links a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Add styles for Teaching Experience section */
+.teaching-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.teaching-item {
+  background-color: var(--card-bg-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teaching-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.teaching-role {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.teaching-institution {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.teaching-duration {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.teaching-courses h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.teaching-courses ul {
+  margin-left: 1.2rem;
+}
+
+.teaching-courses li {
+  margin-bottom: 0.2rem;
+  line-height: 1.5;
+}
+
+/* Update the techniques section in work experience */
+.techniques h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 0.8rem;
+  color: var(--text-color);
+}
+
+.techniques ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin-left: 0;
+}
+
+.techniques li {
+  background-color: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Update education field style */
+.education-field {
+  color: var(--accent-color);
+  margin-bottom: 0.3rem;
+} 
